@@ -4,7 +4,7 @@ import { PostsService } from "../services/posts.service";
 const router = Router();
 const service = new PostsService();
 
-router.get("/hihi", async (req, res) => {
+router.get("/", async (req, res) => {
     const limit = Number(req.query.limit || 10);
     const posts = await service.findAll(limit);
     res.json(posts);
